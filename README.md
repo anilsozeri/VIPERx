@@ -1,2 +1,2 @@
 # VIPER
-VIPER Architecture for iOS Projects
+VIPER Architecture with RxSwift for iOS Projects
