@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  ErrorResponse.swift
 //  VIPER
 //
 //  Created by Anıl Sözeri on 28.09.2018.
@@ -8,7 +8,10 @@
 
 import Foundation
 
-enum Constants {
-  /// Timeout for HTTP Requests.
-  static let timeout: TimeInterval = 30
+final class ErrorResponse: Codable {
+  let message: String
+  
+  init(message: String) {
+    self.message = message
+  }
 }

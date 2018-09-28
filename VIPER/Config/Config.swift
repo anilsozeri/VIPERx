@@ -9,5 +9,6 @@
 import Foundation
 
 struct Config {
-  
+  /// Base Url for HTTP Requests
+  static let baseUrl = "http://www.mocky.io/v2/"
 }
