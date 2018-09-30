@@ -1,5 +1,5 @@
 //
-//  TaskListViewController.swift
+//  BaseViewController.swift
 //  VIPER
 //
 //  Created by Anıl Sözeri on 28.09.2018.
@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import SnapKit
+import RxSwift
 
-final class TaskListViewController: UIViewController {
+class BaseViewController: UIViewController {
+  var activityIndicator: UIActivityIndicatorView!
+  
+  let disposeBag = DisposeBag()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }

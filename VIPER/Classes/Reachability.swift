@@ -1,9 +1,9 @@
 //
 //  Reachability.swift
-//  Enuygun
+//  VIPER
 //
 //  Created by Anıl Sözeri on 24.09.2018.
-//  Copyright © 2018 Celal KANAT. All rights reserved.
+//  Copyright © 2018 Anıl Sözeri. All rights reserved.
 //
 
 import SystemConfiguration

@@ -9,5 +9,15 @@
 import Foundation
 
 enum Localization {
+  enum TaskList {
+    static let navigationTitle = "Tasks"
+  }
   
+  enum TaskDetail {
+    static let navigationTitle = "Task Detail"
+  }
+  
+  enum Warning {
+    static let checkInternetConnection = "CHECK_INTERNET_CONNECTION".localized()
+  }
 }

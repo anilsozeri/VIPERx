@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  VIPER
+
+  Created by Anıl Sözeri on 30.09.2018.
+  Copyright © 2018 Anıl Sözeri. All rights reserved.
+*/
+
+"CHECK_INTERNET_CONNECTION" = "Lütfen internet bağlantınızı kontrol edin.";

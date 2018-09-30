@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sXC-vh-qmJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Task Detail View Controller-->
+        <scene sceneID="40h-Im-AQ2">
+            <objects>
+                <viewController storyboardIdentifier="TaskDetailViewController" id="sXC-vh-qmJ" customClass="TaskDetailViewController" customModule="VIPER" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tMG-3C-ZDk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg9-18-QVp">
+                                <rect key="frame" x="16" y="36" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgW-XJ-H9Z">
+                                <rect key="frame" x="16" y="73" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cdc-NL-KIY" firstAttribute="trailing" secondItem="dgW-XJ-H9Z" secondAttribute="trailing" constant="16" id="F8U-Ae-YgP"/>
+                            <constraint firstItem="dgW-XJ-H9Z" firstAttribute="top" secondItem="Pg9-18-QVp" secondAttribute="bottom" constant="16" id="GFq-SW-G8b"/>
+                            <constraint firstItem="cdc-NL-KIY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dgW-XJ-H9Z" secondAttribute="bottom" constant="32" id="Kgd-be-9Mp"/>
+                            <constraint firstItem="Pg9-18-QVp" firstAttribute="leading" secondItem="cdc-NL-KIY" secondAttribute="leading" constant="16" id="Tz4-je-PLs"/>
+                            <constraint firstItem="dgW-XJ-H9Z" firstAttribute="leading" secondItem="cdc-NL-KIY" secondAttribute="leading" constant="16" id="aa3-3f-IsQ"/>
+                            <constraint firstItem="cdc-NL-KIY" firstAttribute="trailing" secondItem="Pg9-18-QVp" secondAttribute="trailing" constant="16" id="ljb-ou-EVZ"/>
+                            <constraint firstItem="Pg9-18-QVp" firstAttribute="top" secondItem="cdc-NL-KIY" secondAttribute="top" constant="16" id="w71-Mr-v0E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cdc-NL-KIY"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="dgW-XJ-H9Z" id="BSK-1R-OvJ"/>
+                        <outlet property="titleLabel" destination="Pg9-18-QVp" id="fQN-7N-Aef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeo-xg-hIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="131"/>
+        </scene>
+    </scenes>
+</document>

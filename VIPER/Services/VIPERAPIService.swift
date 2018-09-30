@@ -12,11 +12,11 @@ import RxAlamofire
 import Alamofire
 
 protocol VIPERAPIServiceType {
-  func getTaskList() -> Single<[Task]?>
+  func fetchTaskList() -> Single<[Task]?>
 }
 
 enum Endpoint: String {
-  case taskList
+  case taskList = "5bb0a1403100001000fb6142"
   
   var url: URL {
     return URL(string: Config.baseUrl + self.rawValue)!
@@ -28,17 +28,18 @@ final class VIPERAPIService: VIPERAPIServiceType {
   private var headers: [String: String] = ["Content-Type": "application/json"]
   private let encoding = JSONEncoding.default
   
+  /// Status code for successful HTTP Requests.
   private let SUCCESS = 200
   
   private let disposeBag = DisposeBag()
   
-  func getTaskList() -> Single<[Task]?> {
+  func fetchTaskList() -> Single<[Task]?> {
     return request(methodType: .get, url: Endpoint.taskList.url)
   }
   
   private func request<T: Codable>(methodType: HTTPMethod, url: URL, parameters: [String: AnyObject]? = nil) -> Single<T?> {
     if !Reachability.isConnectedToNetwork() {
-      return Single.error(APIError(with: .internetConnection, message: "Please check your internet connection."))
+      return Single.error(APIError(with: .internetConnection, message: Localization.Warning.checkInternetConnection))
     }
     
     return manager.rx.responseString(methodType, url, parameters: parameters, encoding: encoding, headers: headers)

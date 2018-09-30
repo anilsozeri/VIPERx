@@ -5,6 +5,9 @@ def shared_pods
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
   pod 'RxAlamofire', '~> 4.0'
+  
+  # UI
+  pod 'SnapKit', '~> 4.0.0'
 end
 
 def test_pods
@@ -20,6 +23,10 @@ target 'VIPER' do
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+          config.build_settings['SWIFT_VERSION'] = '4.0'
+        end
+      
        if target.name == 'RxSwift'
           target.build_configurations.each do |config|
              if config.name == 'Debug'

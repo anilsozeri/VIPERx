@@ -1,8 +1,8 @@
 //
 //  APIError.swift
-//  Enuygun
+//  VIPER
 //
-//  Created by Anıl Sözeri on 8.03.2018.
+//  Created by Anıl Sözeri on 24.09.2018.
 //  Copyright © 2018 Anıl Sözeri. All rights reserved.
 //
 
